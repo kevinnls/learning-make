@@ -8,7 +8,7 @@ test/file1.txt: test/file0.txt
 	# make file1.txt the newest
 	touch test/file1.txt
 error:
-	@false #this returns non-zero exit code
+	-@false #this returns non-zero exit code
 	@echo 'uh-oh an error occurred'
 
 .PHONY: greet error
