@@ -1,6 +1,7 @@
 greet:
 	@echo hello, "${USER}"
-test/file0.txt: test
+test/file0.txt: | test
+	@# `| test` = only check its existence; not age
 	# create file0
 	touch test/file0.txt
 test/file1.txt: test/file0.txt
